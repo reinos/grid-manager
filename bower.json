@@ -1,0 +1,21 @@
+{
+  "name": "Grind Manager",
+  "version": "0.0.0",
+  "authors": [
+    "Rein de Vries"
+  ],
+  "license": "MIT",
+  "homepage": "www.reinos.nl",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "jquery": "~1.11.3",
+    "jquery-ui": "~1.11.4",
+    "lodash": "~3.9.3"
+  },
+  "devDependencies": {}
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Gridmanager Development</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <!-- Grid Manager CSS -->
+        <link href="css/gridmanager.css" rel="stylesheet">
+
+        <!-- jQuery -->
+        <script src="/grid-manager/bower_components/jquery/dist/jquery.js"></script>
+        <script src="/grid-manager/bower_components/jquery-ui/jquery-ui.js"></script>
+        <script src="/grid-manager/bower_components/lodash/lodash.js"></script>
+
+        <!-- Grid Manager JS -->
+        <script src="js/gridmanager.js"></script>
+        <script src="js/gridmanager.tmpl.js"></script>
+
+    </head>
+    <body>
+
+        <div class="grid grid_field_id_59"></div>
+
+        <script>
+            $(document).ready(function(){
+                //this data is coming out of EE
+                var rowsData = [
+                    [
+                        {
+                            name: "value",
+                            field: "<input class='gridmanager_field' data-name='value' name='field_id_59[value][0][]' type='text' value='value 1'/>"
+                        },
+                        {
+                            name: "title",
+                            field: "<input class='gridmanager_field' data-name='title' name='field_id_59[title][0][]' type='text' value='title 1'/>"
+                        },
+                        {
+                            name: "description",
+                            field: "<textarea class='gridmanager_field' data-name='description' name='field_id_59[description][0][]' cols='9'>description 1</textarea>"
+                        }
+                    ],
+                    [
+                        {
+                            name: "value",
+                            field: "<input class='gridmanager_field' data-name='value' name='field_id_59[value][0][]' type='text' value='value 1'/>"
+                        },
+                        {
+                            name: "title",
+                            field: "<input class='gridmanager_field' data-name='title' name='field_id_59[title][0][]' type='text' value='title 1'/>"
+                        },
+                        {
+                            name: "description",
+                            field: "<textarea class='gridmanager_field' data-name='description' name='field_id_59[description][0][]' cols='9'>description 1</textarea>"
+                        }
+                    ]
+                ]
+
+
+                       // '[["<input name=\'value[1][]\' type=\'text\' value=\'value\'/>", "<input name=\'title[1][]\' type=\'text\' value=\'test\'/>", "<textarea name=\'description[1][]\' cols=\'9\'>sdf</textarea>"]]';
+                $('.grid').gridmanager({
+                    rows: JSON.stringify(rowsData),
+                    heading: ['Value', 'Title', 'Description'],
+                    fieldName: 'field_id_59'
+                });
+            });
+        </script>
+    </body>
+</html>
+  
